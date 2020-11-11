@@ -1,0 +1,47 @@
+.shared__header {
+  background-color: rgb(224, 227, 225);
+  color: var(--text-color);
+  font-family: "PT Sans Narrow", sans-serif;
+  padding: 2rem 3rem;
+  /* text-align: center; */
+}
+
+.shared__header h2 {
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.shared__header span {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.shared__header span > svg {
+  font-size: 0.8rem;
+  margin-right: 0.1rem;
+}
+
+.shared__header a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.shared__header a:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .shared__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2rem 6.5rem; */
+  }
+
+  .shared__header h2 {
+    margin-bottom: unset;
+  }
+}

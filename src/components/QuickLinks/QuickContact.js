@@ -3,6 +3,7 @@ import HomeWorkRoundedIcon from "@material-ui/icons/HomeWorkRounded";
 import PhoneInTalkRoundedIcon from "@material-ui/icons/PhoneInTalkRounded";
 import MailRoundedIcon from "@material-ui/icons/MailRounded";
 import RoomRoundedIcon from "@material-ui/icons/RoomRounded";
+import { Link } from "react-router-dom";
 const QuickContact = () => {
   return (
     <section className="quickNav quickContact">
@@ -45,7 +46,7 @@ const QuickContact = () => {
 
         <li className="quickContact__item">
           <RoomRoundedIcon />
-          <a href="#">Find us on map</a>
+          <Link to="/">Find us on map</Link>
         </li>
       </ul>
     </section>

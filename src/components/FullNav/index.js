@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import logo from "../../assets/Glo-glasslogo-3.png";
 import "./fullNav.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import TopSocial from "../TopSocial/TopSocial";
 import SlideShow from "../SlideShow";
 import MoreDetails from "./MoreDetails";
 const FullNav = () => {
+  const location = useLocation();
+  // state
   const [nav, setNav] = useState({ personal: "", business: "", vas: "" });
   const handleHover = (e) => {
     const newNavState = {
@@ -34,37 +36,47 @@ const FullNav = () => {
           <ul className="nav__body">
             <li>
               <NavLink
-                to="/"
+                to="/ng"
                 className="nav__bodyHome nav__links"
                 onMouseEnter={outSideHover}
+                activeClassName={location.pathname === "/ng" && "activeLink"}
               >
                 <HomeIcon /> <span> Home</span>
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/self-care"
                 className="nav__links"
                 onMouseEnter={outSideHover}
+                activeClassName={
+                  location.pathname === "/ng/self-care" && "activeLink"
+                }
               >
                 instant top-up
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/self-care"
                 className="nav__links"
                 onMouseEnter={outSideHover}
+                activeClassName={
+                  location.pathname === "/ng/self-care" && "activeLink"
+                }
               >
                 glo cafe
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/personal"
                 className="nav__links"
                 id="personal"
                 onMouseEnter={handleHover}
+                activeClassName={
+                  location.pathname === "/ng/personal" && "activeLink"
+                }
                 // onMouseLeave={outSideHover}
               >
                 personal
@@ -72,10 +84,13 @@ const FullNav = () => {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/business"
                 className="nav__links"
                 id="business"
                 onMouseEnter={handleHover}
+                activeClassName={
+                  location.pathname === "/ng/business" && "activeLink"
+                }
                 // onMouseLeave={outSideHover}
               >
                 business
@@ -83,10 +98,13 @@ const FullNav = () => {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/vas"
                 className="nav__links"
                 id="vas"
                 onMouseEnter={handleHover}
+                activeClassName={
+                  location.pathname === "/ng/vas" && "activeLink"
+                }
                 // onMouseLeave={outSideHover}
               >
                 vas
@@ -94,18 +112,24 @@ const FullNav = () => {
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/mobile-money"
                 className="nav__links"
                 onMouseEnter={outSideHover}
+                activeClassName={
+                  location.pathname === "/ng/mobile-money" && "activeLink"
+                }
               >
                 mobile money
               </NavLink>
             </li>
             <li>
               <NavLink
-                to="/"
+                to="/ng/e-top-up"
                 className="nav__links"
                 onMouseEnter={outSideHover}
+                activeClassName={
+                  location.pathname === "/ng/e-top-up" && "activeLink"
+                }
               >
                 e top-up
               </NavLink>
@@ -114,6 +138,7 @@ const FullNav = () => {
         </header>
       </nav>
       <TopSocial />
+
       <SlideShow>
         <MoreDetails {...nav} />
       </SlideShow>

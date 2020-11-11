@@ -1,41 +1,63 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useState, createContext } from "react";
+import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import "./App.css";
-import FullNav from "./components/FullNav";
-import MobileNav from "./components/MobileNav";
-// import SlideShow from "../SlideShow";
 import QuickLinks from "./components/QuickLinks/QuickLinks";
-import FixedRightBar from "./components/FixedRightBar/Index";
-// import TopSocial from "../TopSocial/TopSocial";
-import Services from "./components/GloServices/Services";
-import MobileNavMenu from "./components/MobileNav/MobileNavMenu";
-import MobileTopSocial from "./components/TopSocial/MobileTopSocial";
 import Home from "./components/SitePages/Home";
+import Personal from "./components/SitePages/Personal/Personal";
+import Business from "./components/SitePages/Business/Business";
+import Vas from "./components/SitePages/Vas/Vas";
+import SelfCare from "./components/SitePages/SelfCare/SelfCare";
+import TopSection from "./components/TopSection";
+
+export const TopSectionContext = createContext();
 
 const App = () => {
+  const location = useLocation();
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const [isSettingsToggled, setSettingsToggled] = useState(false);
+
+  const toggleNav = () => setIsMenuToggled(!isMenuToggled);
+  const toggleSettings = () => setSettingsToggled(!isSettingsToggled);
   return (
     <div className="App">
-      <Router>
-        <FixedRightBar />
-        <section className="allMobile">
-          <MobileNav
-            hamburger={isMenuToggled}
-            toggleNav={() => setIsMenuToggled(!isMenuToggled)}
-            toggleSettings={() => setSettingsToggled(!isSettingsToggled)}
-          />
-          {isMenuToggled && <MobileNavMenu />}
-          {isSettingsToggled && <MobileTopSocial />}
-        </section>
-        <FullNav />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-        </Switch>
-        <QuickLinks />
-      </Router>
+      {/* <Router><App /> </Router> - see index.js */}
+      {/* common elements on all MOST pages - HEADER PART */}
+      {/* don't render TopSection when /ng/self-care is visited */}
+      {location.pathname !== "/ng/self-care" && (
+        <TopSectionContext.Provider
+          value={{
+            isMenuToggled,
+            isSettingsToggled,
+            toggleNav,
+            toggleSettings,
+          }}
+        >
+          <TopSection />
+        </TopSectionContext.Provider>
+      )}
+      {/* common elements on all MOST pages - HEADER PART*/}
+      <Switch>
+        <Route path="/ng/self-care">
+          <SelfCare />
+        </Route>
+
+        <Route path="/ng/vas">
+          <Vas />
+        </Route>
+        <Route path="/ng/business">
+          <Business />
+        </Route>
+        <Route path="/ng/personal">
+          <Personal />
+        </Route>
+        <Route path="/ng" exact>
+          <Home />
+        </Route>
+        <Redirect from="/" to="/ng" />
+      </Switch>
+      {/* common elements on all MOST pages - footer PART*/}
+      {/* don't render QuickLinks when /ng/self-care is visited */}
+      {location.pathname !== "/ng/self-care" && <QuickLinks />}
     </div>
   );
 };

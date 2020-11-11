@@ -64,6 +64,10 @@
   height: 100%;
 }
 
+.activeLink {
+  color: #4f4949;
+  background-color: #fff;
+}
 .nav__links:hover {
   color: #4f4949;
   background-color: #fff;
@@ -78,7 +82,7 @@
   margin-right: 0.4rem;
 }
 
-@media (min-width: 930px) {
+@media (min-width: 1029px) {
   .nav {
     display: block;
   }

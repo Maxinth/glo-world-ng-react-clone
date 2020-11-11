@@ -1,0 +1,13 @@
+.vas__nav {
+  list-style-type: none;
+}
+
+.vas__nav a {
+  text-decoration: none;
+  color: rgb(149, 162, 156);
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
+}
+.vas__nav a:hover {
+  text-decoration: underline;
+}

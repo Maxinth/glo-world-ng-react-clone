@@ -1,0 +1,44 @@
+.personal {
+  /* padding: 2rem 1rem; */
+  margin-bottom: 1rem;
+  width: 100%;
+  /* margin-top: 3px; */
+}
+
+.personal__text {
+  padding: 1rem;
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 13px;
+  font-family: "PT Sans", sans-serif;
+}
+
+.personal__text p {
+  margin-bottom: 1rem;
+}
+
+.personal__nav {
+  /* padding: 1rem; */
+  list-style-type: none;
+}
+
+.personal__nav li {
+  margin-bottom: 0.2rem;
+}
+
+.personal__nav li > a {
+  color: var(--text-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.personal__nav li > a:hover {
+  text-decoration: none;
+}
+
+.personal__header,
+.personal__text,
+nav {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
