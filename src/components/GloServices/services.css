@@ -1,0 +1,102 @@
+.services {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0.3rem;
+}
+.services__ind {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.2rem;
+  max-width: 600px;
+  margin-right: 1rem;
+  z-index: 1;
+}
+
+.services__ind span {
+  margin-right: 0px;
+  /* align-self: flex-start; */
+}
+.services__ind svg {
+  font-size: 4rem;
+  background-color: var(--glo-green);
+  color: #fff;
+  display: block;
+  padding: 0.4rem;
+  margin-right: 1rem;
+}
+
+.services__ind header > a {
+  font-family: "PT Sans Narrow", sans-serif;
+  color: rgb(102, 102, 102);
+  font-size: 20px;
+  text-decoration: none;
+  /* padding: 0.5rem; */
+}
+
+.services__ind header {
+  border-left: 2px dashed rgb(136, 136, 136);
+  /* margin-left: 1rem; */
+  padding: 2rem 0.9rem;
+  min-width: 250px;
+}
+
+.services__ind header p {
+  color: rgb(136, 136, 136);
+  font-size: 0.9rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.services__ind header p > a {
+  padding: 0.3rem;
+  color: rgb(136, 136, 136);
+}
+
+@media (min-width: 500px) {
+  .services {
+    padding-left: 2rem;
+  }
+
+  .services__ind header p {
+    font-size: 0.8rem;
+  }
+
+  .services__ind {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .services {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .services__ind {
+    max-width: 500px;
+  }
+
+  .services__ind header {
+    max-width: 600px;
+  }
+  .services__ind svg {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 999px) {
+  .services__ind {
+    max-width: 500px;
+  }
+
+  .services__ind header > a {
+    font-size: 28px;
+  }
+
+  .services__ind header p {
+    font-size: 0.86rem;
+  }
+
+  .services__ind svg {
+    font-size: 3.5rem;
+  }
+}

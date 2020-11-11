@@ -1,0 +1,79 @@
+.devices__heading {
+  display: flex;
+  align-items: center;
+  color: var(--heading-color);
+  padding-bottom: 0.2rem;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.devices__heading hr {
+  /* width: 40vw; */
+  height: 1px;
+  flex: 1;
+  color: var(--heading-color);
+}
+
+.devices__heading span {
+  margin-right: 0.5rem;
+}
+.devices__text {
+  color: var(--text-color);
+  font-family: "PT Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  padding-left: 0.3rem;
+  padding-bottom: 0.7rem;
+}
+
+.devicesPhones__inner {
+  padding: 0.3rem 0;
+  /* margin-bottom: 0.6rem; */
+  font-family: "PT Sans Narrow", sans-serif;
+  color: var(--text-color);
+
+  border-bottom: 1px solid rgb(224, 227, 225);
+}
+
+.devicesPhones__inner.bt {
+  border-top: 1px solid rgb(224, 227, 225);
+}
+.devicesPhones__inner,
+.devicesPhones__title {
+  display: flex;
+  align-items: center;
+}
+
+.devicesPhones__inner + .devicesPhones__image {
+  margin-top: 0.4rem;
+}
+.devicesPhones__title {
+  margin-right: auto;
+}
+
+.devicesPhones__image {
+  border: 1px solid rgb(224, 227, 225);
+
+  display: flex;
+  align-items: center;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: var(--text-color);
+}
+
+.devicesPhones__image div {
+  margin-right: 1rem;
+  padding: 1rem;
+  height: 100%;
+  border-right: 1px solid rgb(224, 227, 225);
+}
+
+.devicesPhones img {
+  object-fit: contain;
+  width: 70px;
+  height: 70px;
+}
+
+@media (min-width: 768px) {
+  .devices {
+    width: 60%;
+  }
+}

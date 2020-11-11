@@ -1,0 +1,99 @@
+.detailsList {
+  color: #fff;
+  padding: 0.3rem;
+  text-align: left;
+  font-family: "PT Sans Narrow", sans-serif;
+  flex: 1;
+
+  border-left: 1px solid #67d735;
+  /* height: 347px; */
+  height: 100%;
+}
+.detailsList ul {
+  list-style-type: none;
+
+  /* padding: 1rem; */
+}
+
+.detailsList h4 {
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 2rem;
+  padding-bottom: 0.7rem;
+}
+.detailsList li {
+  /* border-bottom: 1px solid hsl(86, 89%, 75%); */
+  border-bottom: 1px solid #67d735;
+}
+.detailsList__body li {
+  padding: 0.2rem;
+}
+
+.detailsList__body .subMenu li a {
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+}
+.detailsList__body .subMenu li a:hover {
+  background-color: unset;
+  color: #fff;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+.detailsList__body a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+
+.dataList {
+  display: flex;
+  padding: 1rem 0rem;
+  height: 100%;
+}
+
+.vasList {
+  display: flex;
+  padding: 1rem 0;
+  flex-basis: 100px;
+}
+
+.vasList article {
+  padding-right: 1rem;
+  border-right: 1px solid #67d735;
+  border-left: unset;
+}
+
+.vasList .vas {
+  flex: 1;
+  border-right: 1px solid #67d735;
+  margin-left: 0.5rem;
+  /* height: 347px; */
+  height: 100%;
+}
+
+.vasList .vas:last-child {
+  border-right: unset;
+}
+
+.vas h3 {
+  padding-left: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+.vas h4 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+@media (min-width: 930px) {
+  .detailsList {
+    /* height: 340px; */
+    height: 100%;
+  }
+
+  .vasList .vas {
+    /* height: 340px; */
+    height: 100%;
+  }
+}

@@ -1,0 +1,49 @@
+.fixedBar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: calc(100vw - 30px);
+  top: 50vh;
+  z-index: 100;
+}
+
+.fixedBar div {
+  background-color: #319835 !important;
+  margin-top: 0.1rem;
+  width: 2rem;
+  /* padding: 0.6rem 0.2rem 0.2rem 0.2rem; */
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: #fff !important;
+  z-index: 100;
+}
+
+/* .fixedBar div:hover {
+  width: 20vw;
+  position: relative;
+  right: 5rem;
+  height: initial;
+  padding: 2rem;
+} */
+
+.fixedBar div svg {
+  margin-right: 0.4rem;
+  font-size: 1.2rem;
+}
+
+.fixedBar div > span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "PT sans", sans-serif;
+  font-size: 0.8rem;
+}
+.fixedBar svg {
+  color: #fff !important;
+}
+
+@media (min-width: 1360px) {
+  .fixedBar {
+    left: calc(100vw - 50px);
+  }
+}

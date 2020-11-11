@@ -1,0 +1,27 @@
+.mobileNav {
+  display: flex;
+  background-color: rgb(53, 53, 53);
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.mobileNav svg {
+  color: rgb(153, 153, 153);
+  font-size: 2rem;
+}
+
+/* .mobileNav svg:hover {
+  color: rgb(247, 243, 6);
+} */
+.mobileNav svg#open {
+  color: rgb(193, 225, 243);
+}
+.mobileNav svg:active {
+  color: #fff;
+}
+
+@media (min-width: 930px) {
+  .mobileNav {
+    display: none;
+  }
+}

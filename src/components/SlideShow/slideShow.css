@@ -1,0 +1,15 @@
+.slideShow {
+  width: 100%;
+  background-color: #fff;
+}
+
+.slideShow__imgContainer {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.slideShow img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}

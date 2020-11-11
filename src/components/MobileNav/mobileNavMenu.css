@@ -1,0 +1,57 @@
+.mobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.mobileNavMenu {
+  padding-top: 0.5rem;
+}
+.mobileNavMenu ul {
+  background-color: var(--glo-green);
+  list-style-type: none;
+}
+
+.mobileNavMenu li {
+  border-top: 1px solid greenyellow;
+}
+.mobileNavMenu a:hover {
+  color: hsl(0, 4%, 30%);
+  background-color: #fff;
+}
+
+.mobileNavMenu a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #fff;
+}
+
+.subMenu {
+  list-style-type: none;
+}
+
+.subMenu li {
+  width: 100%;
+  padding-left: 2rem;
+}
+.subMenu li a {
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+}
+.subMenu li a:hover {
+  background-color: unset;
+  color: #fff;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+@media (min-width: 930px) {
+  .mobileNavMenu {
+    display: none;
+  }
+}

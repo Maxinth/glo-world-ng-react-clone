@@ -1,0 +1,12 @@
+.devicesAndNews {
+  padding: 2rem 1.8rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .devicesAndNews {
+    display: flex;
+    align-items: flex-start;
+  }
+}
