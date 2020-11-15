@@ -1,13 +1,20 @@
 import React, { useState, createContext } from "react";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import "./App.css";
-import QuickLinks from "./components/QuickLinks/QuickLinks";
+// Site Pages
 import Home from "./components/SitePages/Home";
 import Personal from "./components/SitePages/Personal/Personal";
 import Business from "./components/SitePages/Business/Business";
 import Vas from "./components/SitePages/Vas/Vas";
 import SelfCare from "./components/SitePages/SelfCare/SelfCare";
+import ETopUp from "./components/SitePages/E-TOP-UP/ETopUp";
+import MobileMoney from "./components/SitePages/MobileMoney/MobileMoney";
+// end of site pages
+
+// common content across MOST pages excluding SelfCare
 import TopSection from "./components/TopSection";
+import QuickLinks from "./components/QuickLinks/QuickLinks";
+// end of common contents
 
 export const TopSectionContext = createContext();
 
@@ -37,10 +44,15 @@ const App = () => {
       )}
       {/* common elements on all MOST pages - HEADER PART*/}
       <Switch>
+        <Route path="/ng/mobile-money">
+          <MobileMoney />
+        </Route>
         <Route path="/ng/self-care">
           <SelfCare />
         </Route>
-
+        <Route path="/ng/e-top-up">
+          <ETopUp />
+        </Route>
         <Route path="/ng/vas">
           <Vas />
         </Route>
@@ -53,6 +65,8 @@ const App = () => {
         <Route path="/ng" exact>
           <Home />
         </Route>
+        <Redirect from="/ng/glo-cafe" to="ng/self-care" />
+        <Redirect from="/ng/instant-top-up" to="/ng/self-care" />
         <Redirect from="/" to="/ng" />
       </Switch>
       {/* common elements on all MOST pages - footer PART*/}

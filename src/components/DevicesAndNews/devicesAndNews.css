@@ -10,3 +10,9 @@
     align-items: flex-start;
   }
 }
+
+@media (min-width: 1200px) {
+  .devicesAndNews {
+    padding: 2rem 0rem;
+  }
+}

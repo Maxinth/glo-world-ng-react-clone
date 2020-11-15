@@ -65,8 +65,13 @@
 }
 
 .activeLink {
-  color: #4f4949;
+  color: var(--glo-green);
   background-color: #fff;
+  font-weight: bolder;
+}
+
+.nav__links.activeLink:hover {
+  color: var(--glo-green);
 }
 .nav__links:hover {
   color: #4f4949;

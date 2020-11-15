@@ -35,7 +35,7 @@
 }
 
 .services__ind header {
-  border-left: 2px dashed rgb(136, 136, 136);
+  border-left: 1px dashed rgb(136, 136, 136);
   /* margin-left: 1rem; */
   padding: 2rem 0.9rem;
   min-width: 250px;

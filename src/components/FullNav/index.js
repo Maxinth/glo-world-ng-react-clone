@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import logo from "../../assets/Glo-glasslogo-3.png";
 import "./fullNav.css";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import HomeIcon from "@material-ui/icons/Home";
 import TopSocial from "../TopSocial/TopSocial";
 import SlideShow from "../SlideShow";
 import MoreDetails from "./MoreDetails";
+import { motion } from "framer-motion";
+import { variantProps, fullNavImgVariant } from "../variants/varFullNav";
+
 const FullNav = () => {
   const location = useLocation();
   // state
@@ -25,21 +28,31 @@ const FullNav = () => {
   };
   return (
     <section className="fullNav" onMouseLeave={outSideHover}>
-      <div className="fullNav__imageAndText">
-        <img src={logo} alt="glo logo" />
+      <motion.div
+        variants={fullNavImgVariant}
+        {...variantProps}
+        className="fullNav__imageAndText"
+      >
+        <Link to="/ng">
+          <img src={logo} alt="glo logo" />
+        </Link>
         <h6>Nigeria | Unlimited</h6>
-      </div>
+      </motion.div>
 
       <nav className="nav">
         <header className="nav__header">
+          {/* <Link to="/ng"> */}
           <img src={logo} alt="glo logo" />
+          {/* </Link> */}
           <ul className="nav__body">
             <li>
               <NavLink
                 to="/ng"
                 className="nav__bodyHome nav__links"
                 onMouseEnter={outSideHover}
-                activeClassName={location.pathname === "/ng" && "activeLink"}
+                activeClassName={
+                  location.pathname === "/ng" ? "activeLink" : ""
+                }
               >
                 <HomeIcon /> <span> Home</span>
               </NavLink>
@@ -50,7 +63,7 @@ const FullNav = () => {
                 className="nav__links"
                 onMouseEnter={outSideHover}
                 activeClassName={
-                  location.pathname === "/ng/self-care" && "activeLink"
+                  location.pathname === "/ng/instant-top-up" ? "activeLink" : ""
                 }
               >
                 instant top-up
@@ -62,7 +75,7 @@ const FullNav = () => {
                 className="nav__links"
                 onMouseEnter={outSideHover}
                 activeClassName={
-                  location.pathname === "/ng/self-care" && "activeLink"
+                  location.pathname === "/ng/glo-cafe" ? "activeLink" : ""
                 }
               >
                 glo cafe
@@ -75,7 +88,7 @@ const FullNav = () => {
                 id="personal"
                 onMouseEnter={handleHover}
                 activeClassName={
-                  location.pathname === "/ng/personal" && "activeLink"
+                  location.pathname === "/ng/personal" ? "activeLink" : ""
                 }
                 // onMouseLeave={outSideHover}
               >
@@ -89,7 +102,7 @@ const FullNav = () => {
                 id="business"
                 onMouseEnter={handleHover}
                 activeClassName={
-                  location.pathname === "/ng/business" && "activeLink"
+                  location.pathname === "/ng/business" ? "activeLink" : ""
                 }
                 // onMouseLeave={outSideHover}
               >
@@ -103,7 +116,7 @@ const FullNav = () => {
                 id="vas"
                 onMouseEnter={handleHover}
                 activeClassName={
-                  location.pathname === "/ng/vas" && "activeLink"
+                  location.pathname === "/ng/vas" ? "activeLink" : ""
                 }
                 // onMouseLeave={outSideHover}
               >
@@ -116,7 +129,7 @@ const FullNav = () => {
                 className="nav__links"
                 onMouseEnter={outSideHover}
                 activeClassName={
-                  location.pathname === "/ng/mobile-money" && "activeLink"
+                  location.pathname === "/ng/mobile-money" ? "activeLink" : ""
                 }
               >
                 mobile money
@@ -128,7 +141,7 @@ const FullNav = () => {
                 className="nav__links"
                 onMouseEnter={outSideHover}
                 activeClassName={
-                  location.pathname === "/ng/e-top-up" && "activeLink"
+                  location.pathname === "/ng/e-top-up" ? "activeLink" : ""
                 }
               >
                 e top-up

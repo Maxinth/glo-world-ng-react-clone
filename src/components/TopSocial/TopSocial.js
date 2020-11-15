@@ -46,7 +46,7 @@ const TopSocial = () => {
         bgColor = "#e91515";
         break;
       default:
-        console.log("it doesn't works");
+        console.log("it doesn't work");
         break;
     }
     return feedBack;

@@ -6,10 +6,10 @@
 }
 
 .personal__text {
-  padding: 1rem;
+  /* padding:  0 1rem 0; */
   color: var(--text-color);
   line-height: 1.7;
-  font-size: 13px;
+  font-size: 14px;
   font-family: "PT Sans", sans-serif;
 }
 
@@ -36,9 +36,9 @@
   text-decoration: none;
 }
 
-.personal__header,
-.personal__text,
-nav {
+.personal__header
+/* .personal__text, */
+/* nav  */ {
   padding-left: 3rem;
   padding-right: 3rem;
 }

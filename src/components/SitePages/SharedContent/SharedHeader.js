@@ -6,7 +6,7 @@ import "./sharedHeader.css";
 const SharedHeader = ({ heading }) => {
   return (
     <header className="shared__header">
-      <h2>{heading.toUpperCase()}</h2>
+      <h2>{heading !== "E-Top-Up" ? heading.toUpperCase() : heading}</h2>
       <span>
         <HomeRoundedIcon />
         <Link to="/ng">Home</Link>

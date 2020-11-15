@@ -1,0 +1,87 @@
+.e-topUp__imgContainer {
+  width: 100%;
+}
+
+.e-topUp__imgContainer img {
+  object-fit: contain;
+  width: 100%;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.e-topUp__details {
+  color: var(--text-color);
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.6;
+  margin-bottom: 1.7rem;
+  margin-top: 1rem;
+}
+
+.e-topUp__details > p {
+  font-size: 14px;
+}
+
+.e-topUp__details > p em {
+  font-weight: 800;
+}
+
+.e-topUp__more {
+  margin-top: 1rem;
+  color: rgb(102, 102, 102);
+}
+
+.e-topUp__more > h2 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.e-topUp__more a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+
+.e-topUp__more a:hover {
+  text-decoration: underline;
+}
+
+.e-topUp__more > h2 + p,
+.detail,
+.e-topUp__dealer,
+.e-topUp__nav {
+  color: rgb(136, 136, 136);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.e-topUp__dealer {
+  font-size: 14px;
+}
+
+.e-topUp__dealer > p {
+  margin-bottom: 1rem;
+}
+
+.e-topUp__dealer p > a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.e-topUp__dealer p > a:hover {
+  text-decoration: underline;
+}
+.detail {
+  margin-bottom: 1rem;
+}
+
+.e-topUp__nav {
+  list-style-type: none;
+  margin-bottom: 1.5rem;
+}
+
+.e-topUp__nav li > a {
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+  display: inline-block;
+}

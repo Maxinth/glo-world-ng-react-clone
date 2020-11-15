@@ -1,0 +1,145 @@
+.selfCare {
+  padding: 4rem 1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.selfCare__largeScreenOnly {
+  display: none;
+}
+
+.selfCare__text {
+  font-family: "PT Sans", sans-serif;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.selfCare__img > h3 {
+  color: var(--glo-green);
+  font-size: 1.5rem;
+  font-family: "PT Sans", sans-serif;
+}
+
+.selfCare__img > h3 span {
+  color: #03394e;
+}
+
+.selfCare__formContainer {
+  margin-top: 2rem;
+}
+
+.selfCare__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selfCare__form svg {
+  background-color: var(--glo-green);
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.selfCare__form input {
+  border: none;
+  border-bottom: 1px solid var(--glo-green);
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.selfCare__form input:invalid {
+  outline: none;
+  /* border-bottom: 1px solid red; */
+}
+.selfCare__form button {
+  border: none;
+  background-color: rgb(84, 169, 69);
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 30px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.selfCare__header,
+svg.selfCare__forwardArrow {
+  display: none;
+}
+
+/* ON LARGER SCREENS */
+@media (min-width: 1200px) {
+  .selfCare {
+    display: flex;
+    text-align: left;
+    max-width: 100vw;
+    padding: unset;
+    width: 100%;
+    margin: unset;
+    height: 100%;
+  }
+
+  .selfCare__largeScreenOnly {
+    display: block;
+    margin: 2rem;
+  }
+
+  .selfCare__mobileImg,
+  .selfCare__text,
+  .selfCare__form button,
+  .selfCare__form svg {
+    display: none;
+  }
+
+  .selfCare__img {
+    background: #eef6ec;
+    width: 25%;
+    height: 680px;
+  }
+
+  .selfCare__formContainer {
+    /* width: 75%; */
+    flex: 1;
+  }
+
+  .selfCare__form input {
+    width: 30%;
+    margin-top: 4rem;
+  }
+  .selfCare__header {
+    display: block;
+    padding: 2rem;
+
+    border-bottom: 1px solid #eef6ec;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(87, 87, 87);
+    font-size: 14px;
+  }
+
+  .selfCare__header span:hover {
+    text-decoration: underline;
+  }
+
+  svg.selfCare__forwardArrow {
+    display: block;
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  .selfCare__img > h3 {
+    margin: 2rem;
+    margin-bottom: 6rem;
+  }
+
+  .selfCare__img > h3 span {
+    font-weight: normal;
+  }
+}

@@ -9,7 +9,7 @@ import LoopSharpIcon from "@material-ui/icons/LoopSharp";
 export default [
   {
     icon: <PhoneEnabledSharpIcon />,
-    goTo: "/",
+    goTo: "/ng/login",
     firstLink: "Instant Top-Up",
     info: ` Recharge any Glo number from your mobile or desktop device with your
             local/intl credit/debit cards`,
@@ -17,7 +17,7 @@ export default [
   },
   {
     icon: <WifiSharpIcon />,
-    goTo: "/",
+    goTo: "/ng/personal/data/data-plans",
     firstLink: "Buy Data",
     info: ` Buy from our variety of unmatched plans 
     to enjoy superfast speed that gives you the unfair advantage`,
@@ -25,7 +25,7 @@ export default [
   },
   {
     icon: <LocalAtmSharpIcon />,
-    goTo: "/",
+    goTo: "/ng/vas/lifestyle/glo-borrow-me-data",
     firstLink: "Borrow Data",
     info: ` Buy from our variety of unmatched plans 
     to enjoy superfast speed that gives you the unfair advantage`,
@@ -33,7 +33,7 @@ export default [
   },
   {
     icon: <ShareSharpIcon />,
-    goTo: "/",
+    goTo: "/personal/data/data-sharing",
     firstLink: "Share Data",
     info: ` You can now share your data plans online
      with friends and family by simply clicking on this link`,
@@ -49,7 +49,7 @@ export default [
   },
   {
     icon: <LoopSharpIcon />,
-    goTo: "/",
+    goTo: "/ng/personal/voice-sms/easyshare",
     firstLink: " Easy Share",
     info: ` Send Glo airtime from your 
     current balance to anyone on the Glo network instantly at no cost`,

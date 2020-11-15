@@ -25,7 +25,7 @@
 .quickLinks__content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 .quickLinks:nth-of-type(1) {
   margin-right: 3rem;
@@ -51,6 +51,18 @@
   font-size: 13px;
   font-weight: 400;
   line-height: 22.75px;
+}
+
+.quickNav__body > li > a {
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.quickNav__body > li > a.upperCase {
+  text-transform: uppercase;
+}
+.quickNav__body > li > a:hover {
+  text-decoration: underline;
 }
 
 .quickNav.quickContact .quickContact__item > a {
@@ -88,8 +100,11 @@
   .quickLinks__content {
     display: flex;
     align-items: center;
+    padding: 0 1.8rem;
   }
-
+  .quickNav {
+    padding-left: 0;
+  }
   .quickLinks {
     padding-top: unset;
     /* padding */
@@ -102,5 +117,11 @@
   .quickNav.quickContact h3 {
     text-align: center;
     margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .quickLinks__content {
+    padding: 1rem 0rem;
   }
 }

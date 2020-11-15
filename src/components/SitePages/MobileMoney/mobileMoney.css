@@ -1,0 +1,43 @@
+.mobileMoney__imgContainer,
+.mobileMoney__banks {
+  width: 100%;
+}
+.mobileMoney__imgContainer > img {
+  object-fit: contain;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.mobileMoney__banks > img {
+  object-fit: contain;
+  max-width: 477px;
+  width: 100%;
+}
+.mobileMoney__nav,
+.mobileMoney__AgentNav {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.mobileMoney__nav li > a,
+.mobileMoney__details > p > a,
+.mobileMoney__AgentNav li > a {
+  /* color: var(--text-color); */
+  color: rgb(149, 162, 156);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bolder;
+}
+
+.mobileMoney__details > p > a {
+  font-size: 15px;
+}
+.mobileMoney__agent > h3,
+.mobileMoney__banks {
+  margin-bottom: 0.5rem;
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  color: var(--text-color);
+}

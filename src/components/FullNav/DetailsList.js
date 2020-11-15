@@ -9,14 +9,6 @@ const {
   devices,
   roaming,
   specialPacks,
-  //   corporatePackages,
-  //   enterpriseSolutions,
-  //   gateway,
-  //   publicSector,
-  //   lifestyle,
-  //   entertainment,
-  //   storage,
-  //   education,
 } = mobileNavData;
 
 const DataDetails = () => {
@@ -32,7 +24,7 @@ const DataDetails = () => {
 
 const VoiceDetails = () => {
   return (
-    <article className="detailsList">
+    <article className="detailsList noLeftBorder">
       <h4>Voice/SMS</h4>
       <ul className="detailsList__body">
         <GenerateList val={dataPackages} />

@@ -9,25 +9,41 @@ const LatestNews = () => {
   const [block, setBlock] = useState(data[index]);
   const { date, firstParagraph, secondParagraph } = block;
 
-  useEffect(() => {
-    setBlock(data[index]);
-  }, [index]);
-
   const increaseIndex = () => {
-    if (index < 2) {
-      setIndex((index) => index + 1);
+    if (index < 5) {
+      return setIndex((index) => index + 1);
     } else {
-      setIndex(0);
+      return setIndex(0);
     }
   };
 
   const decreaseIndex = () => {
     if (index === 0) {
-      setIndex(2);
+      setIndex(5);
     } else {
       setIndex((index) => index - 1);
     }
   };
+
+  // const afterTimeOut = useCallback(() => {
+  //   if (index < 2) {
+  //     return setIndex(index + 1);
+  //   } else {
+  //     return setIndex(0);
+  //   }
+  // }, [index]);
+
+  useEffect(() => {
+    setBlock(data[index]);
+  }, [index]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     // console.log("news changes on its own after 5s");
+  //     afterTimeOut();
+  //     setBlock(data[index]);
+  //   }, 5000);
+  // }, [afterTimeOut, index]);
 
   return (
     <section className="latestNews">

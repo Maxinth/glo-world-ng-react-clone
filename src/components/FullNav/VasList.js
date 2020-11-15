@@ -6,9 +6,9 @@ const { lifestyle } = mobileNavData;
 
 const LifeStyle = () => {
   return (
-    <article className="detailsList">
+    <article className="detailsList ">
       <h4>Lifestyle</h4>
-      <ul className="detailsList__body">
+      <ul className="detailsList__body ">
         <GenerateList val={lifestyle} />
       </ul>
     </article>
@@ -25,7 +25,7 @@ const Vas = ({ title, detail }) => {
 };
 const VasList = () => {
   return (
-    <section className="detailsList vasList">
+    <section className="detailsList noLeftBorder vasList">
       <LifeStyle />
 
       <Vas title="entertainment" detail="Glo GameBox" />

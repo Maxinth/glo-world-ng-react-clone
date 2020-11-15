@@ -2,7 +2,8 @@
   background-color: rgb(224, 227, 225);
   color: var(--text-color);
   font-family: "PT Sans Narrow", sans-serif;
-  padding: 2rem 3rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
   /* text-align: center; */
 }
 
@@ -42,6 +43,12 @@
   }
 
   .shared__header h2 {
+    margin-bottom: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .shared__header {
     margin-bottom: unset;
   }
 }

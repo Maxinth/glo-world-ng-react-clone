@@ -32,81 +32,81 @@ const MobileNavMenu = () => {
     >
       <ul>
         <li>
-          <Link to="/">HOME</Link>
+          <Link to="/ng/">HOME</Link>
         </li>
         <li>
-          <Link to="/">INSTANT TOP-UP</Link>
+          <Link to="/ng/self-care">INSTANT TOP-UP</Link>
         </li>
         <li>
-          <Link to="/">GLO CAFE</Link>
+          <Link to="/ng/self-care">GLO CAFE</Link>
         </li>
         <li>
-          <Link to="/">PERSONAL</Link>
+          <Link to="/ng/personal">PERSONAL</Link>
         </li>
         <li>
-          <Link to="/">VOICE/SMS</Link>
+          <Link to="/ng/voice-and-sms">VOICE/SMS</Link>
           <GenerateList val={voiceData} />
         </li>
 
         <li>
-          <Link to="/">DATA</Link>
+          <Link to="/ng/data">DATA</Link>
           <GenerateList val={dataPackages} />
         </li>
         <li>
-          <Link to="/">DEVICES</Link>
+          <Link to="/ng/devices">DEVICES</Link>
           <GenerateList val={devices} />
         </li>
         <li>
-          <Link to="/">ROAMING</Link>
+          <Link to="/ng/roaming">ROAMING</Link>
           <GenerateList val={roaming} />
         </li>
         <li>
-          <Link to="/">SPECIAL PACKS & OFFERS</Link>
+          <Link to="/ng/special-packs">SPECIAL PACKS & OFFERS</Link>
           <GenerateList val={specialPacks} />
         </li>
         <li>
-          <Link to="/">BUSINESS</Link>
+          <Link to="/ng/business">BUSINESS</Link>
         </li>
         <li>
-          <Link to="/">CORPORATE PACKAGES</Link>
+          <Link to="/ng/corporate-packages">CORPORATE PACKAGES</Link>
           <GenerateList val={corporatePackages} />
         </li>
         <li>
-          <Link to="/">ENTERPRISE SOLUTIONS</Link>
+          <Link to="/ng/enterprise-solution">ENTERPRISE SOLUTIONS</Link>
           <GenerateList val={enterpriseSolutions} />
         </li>
         <li>
-          <Link to="/">GATEWAY</Link>
+          <Link to="/ng/gateway">GATEWAY</Link>
           <GenerateList val={gateway} />
         </li>
         <li>
-          <Link to="/">PUBLIC SECTORS/SME</Link>
+          <Link to="/ng/public-sector">PUBLIC SECTORS/SME</Link>
           <GenerateList val={publicSector} />
         </li>
         <li>
-          <Link to="/">VAS</Link>
+          <Link to="/ng/vas">VAS</Link>
         </li>
         <li>
-          <Link to="/">LIFESTYLE</Link>
+          <Link to="/ng/lifestyle">LIFESTYLE</Link>
           <GenerateList val={lifestyle} />
         </li>
         <li>
-          <Link to="/">ENTERTAINMENT</Link>
+          <Link to="/ng/entertainment">ENTERTAINMENT</Link>
           <GenerateList val={entertainment} />
         </li>
         <li>
-          <Link to="/">STORAGE</Link>
+          <Link to="/ng/storage">STORAGE</Link>
           <GenerateList val={storage} />
         </li>
         <li>
-          <Link to="/">EDUCATIONAL</Link>
+          <Link to="/ng/educational">EDUCATIONAL</Link>
           <GenerateList val={education} />
         </li>
         <li>
-          <Link to="/">MOBILE MONEY</Link>
+          <Link to="/ng/mobile-money">MOBILE MONEY</Link>
         </li>
         <li>
-          <Link to="/">E Top-Up</Link>
+          <Link to="/ng/e-top-up">E Top-Up</Link>
         </li>
       </ul>
     </motion.section>

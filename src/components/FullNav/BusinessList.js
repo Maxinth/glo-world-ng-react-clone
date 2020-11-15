@@ -12,7 +12,7 @@ const {
 
 const CorporatePackages = () => {
   return (
-    <article className="detailsList">
+    <article className="detailsList noLeftBorder">
       <h4>Corporate Packages</h4>
       <ul className="detailsList__body">
         <GenerateList val={corporatePackages} />

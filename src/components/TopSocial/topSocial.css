@@ -60,8 +60,6 @@
 }
 
 .socialRight svg {
-  /* flex: 1; */
-  /* font-size: 1.2rem; */
   margin-right: 0.6rem;
   margin-top: 0.5rem;
   display: block;
@@ -93,18 +91,19 @@
 }
 .feedBackSlide {
   position: relative;
-  /* left: 920px; */
+
   left: calc(100vw - 215px);
   top: 10px;
-  /* border: thin solid black; */
+
   width: 199px;
+  /* width: 100%; */
   margin-bottom: -19px;
   text-align: center;
   font-family: "PT sans", sans-serif;
   font-size: 0.8rem;
   color: #fff;
   z-index: 40;
-  /* padding: 0.1rem; */
+  border-radius: 30px;
 }
 
 @media (min-width: 1029px) {
