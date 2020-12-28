@@ -2,7 +2,7 @@ export default [
   {
     date: "Nov 8, 2020",
     firstParagraph: "React clone of the gloworld.com/ng site gets deployed",
-    secondParagraph: `A clone of the gloworld.com which was built sometime
+    secondParagraph: `A clone of the gloworld.com/ng UI which was built sometime
     in November of 2020 has been deployed. The clone features
     the initial setup of the original site and some extra features all built with the said
     technology. The said clone ...

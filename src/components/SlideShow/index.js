@@ -1,33 +1,37 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 // import testImage from "../../assets/maxresdefault.jpg";
 import "./slideShow.css";
 import { useLocation } from "react-router-dom";
 import slideData from "./slideShowData";
 const SlideShow = ({ children }) => {
   const [index, setIndex] = useState(0);
-  const [imgShown, setImageShown] = useState(slideData[index]);
-  // console.log(slideData);
+  const [data] = useState(slideData);
+
   const location = useLocation();
 
-  const afterTimeOut = useCallback(() => {
-    if (index < 3) {
-      return setIndex(index + 1);
-    } else {
-      return setIndex(0);
+  useEffect(() => {
+    const lastIndex = slideData.length - 1;
+    if (index < 0) {
+      setIndex(lastIndex);
+    }
+    if (index > lastIndex) {
+      setIndex(0);
     }
   }, [index]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      afterTimeOut();
-      console.log(imgShown);
-      setImageShown(slideData[index]);
-    }, 7000);
-  });
+  // run every five 5mins and consult the first useEffect to determine what gets displayed
+
+  // NEW IMAGES ARE CREATED EACH TIME - FIX THIS
 
   useEffect(() => {
-    slideData.map((img) => console.log(img));
-  }, []);
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 5000);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index]);
+
   return (
     <div className="slideShow">
       <div
@@ -35,7 +39,32 @@ const SlideShow = ({ children }) => {
         style={{ height: `${location.pathname !== "/ng" ? "unset" : "400px"}` }}
       >
         {/* show the image only when the homePage is visited */}
-        {location.pathname === "/ng" && <img src={imgShown} alt="testImage" />}
+        {location.pathname === "/ng" && (
+          <section className="slideShow__slides">
+            {data.map((img, slideIndex) => {
+              // const { img, id, title, goTo } = slide;
+              let position = "nextSlide";
+              if (slideIndex === index) {
+                position = "activeSlide";
+              }
+              if (
+                slideIndex === index - 1 ||
+                (index === 0 && slideIndex === data.length - 1)
+              ) {
+                position = "lastSlide";
+              }
+              return (
+                <article
+                  className={`slideShow__slideImg ${position}`}
+                  key={slideIndex}
+                >
+                  <img src={img} alt="slideShow" />
+                  {/* <h1>hello</h1> */}
+                </article>
+              );
+            })}
+          </section>
+        )}
         {children}
       </div>
     </div>

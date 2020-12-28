@@ -3,6 +3,8 @@ import AddSharpIcon from "@material-ui/icons/AddSharp";
 import PhoneIphoneOutlinedIcon from "@material-ui/icons/PhoneIphoneOutlined";
 import { motion } from "framer-motion";
 import { deviceListVariant } from "../variants/varDeviceList";
+import RemoveIcon from "@material-ui/icons/Remove";
+
 const DevicesList = ({ name, phoneImage, status, inView }) => {
   const [showImage, setShowImage] = useState(inView);
   return (
@@ -16,7 +18,11 @@ const DevicesList = ({ name, phoneImage, status, inView }) => {
           <PhoneIphoneOutlinedIcon /> <span>{name}</span>
         </span>
 
-        <AddSharpIcon />
+        {!showImage ? (
+          <AddSharpIcon className="devicesPhones__open" />
+        ) : (
+          <RemoveIcon className="devicePhones__close" />
+        )}
       </div>
       {showImage && (
         <motion.section

@@ -20,11 +20,13 @@
   background-color: rgb(224, 227, 225);
   width: 100%;
   padding-top: 1rem;
+  max-width: 1400px;
 }
 
 .quickLinks__content {
   max-width: 1100px;
   margin: 0 auto;
+  width: 100%;
   padding: 0.5rem 0;
 }
 .quickLinks:nth-of-type(1) {
@@ -122,6 +124,14 @@
 
 @media (min-width: 1200px) {
   .quickLinks__content {
-    padding: 1rem 0rem;
+    padding: 1rem 0.3rem;
   }
+  .quickNav {
+    padding-right: 2rem;
+    margin-right: 4rem;
+  }
+
+  /* .quickLinks__content {
+    padding: 1rem;
+  } */
 }

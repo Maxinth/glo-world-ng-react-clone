@@ -1,22 +1,3 @@
-const feedBackVariant = (bgColor) => {
-  return {
-    hidden: {
-      // y: 0,
-    },
-    visible: {
-      //   y: "-90vw;",
-      backgroundColor: bgColor,
-      color: "#fff",
-      position: "relative",
-      top: "-8px",
-      transition: {
-        type: "spring",
-        duration: 3,
-      },
-    },
-  };
-};
-
 const iconVariant = (color) => {
   return {
     hidden: {
@@ -36,4 +17,4 @@ const iconVariant = (color) => {
   };
 };
 
-export { feedBackVariant, iconVariant };
+export { iconVariant };

@@ -2,6 +2,7 @@
   width: 100%;
   background-color: rgb(248, 248, 248);
   padding: 0.5rem;
+  max-width: 1400px;
   display: none; /* initially hidden */
 }
 
@@ -37,11 +38,15 @@
 }
 .socialLeft__inner input {
   border: none;
-
+  outline: none;
   border-radius: 20px;
   padding: 0.5rem;
 }
 
+.socialLeft__inner input:focus {
+  border: none;
+  outline: none;
+}
 .socialLeft__inner svg {
   font-size: 1.5rem;
   padding-left: 0.3rem;
@@ -67,43 +72,48 @@
 }
 
 .socialRight svg#email:hover {
-  color: #666666;
+  color: var(--glo-green);
 }
 
 .socialRight svg#twitter:hover {
-  color: #66c2ff;
+  color: #00acee;
 }
 
 .socialRight svg#facebook:hover {
-  color: #1445ca;
+  color: #3b5998;
 }
 
 .socialRight svg#linked-in:hover {
-  color: brown;
+  color: #0e76a8;
 }
 
 .socialRight svg#instagram:hover {
-  color: #7a7575 !important;
+  color: purple !important;
 }
 
 .socialRight svg#youTube:hover {
-  color: #e91515;
+  color: #c4302b;
 }
+
 .feedBackSlide {
   position: relative;
 
   left: calc(100vw - 215px);
-  top: 10px;
 
-  width: 199px;
-  /* width: 100%; */
-  margin-bottom: -19px;
+  top: 70px;
+
+  width: 499px;
+  /* margin-bottom: -19px; */
   text-align: center;
   font-family: "PT sans", sans-serif;
   font-size: 0.8rem;
   color: #fff;
+  /* color: black; */
+  margin-top: -0.7rem;
+  padding: 0.5rem 0;
   z-index: 40;
-  border-radius: 30px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 @media (min-width: 1029px) {

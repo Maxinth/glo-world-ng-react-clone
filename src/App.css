@@ -8,8 +8,22 @@
   --text-color: rgb(136, 136, 136);
   --glo-green: rgb(69, 182, 73);
   --heading-color: rgb(102, 102, 102);
+  --transition: all 0.2s linear;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
+.App {
+  max-width: 1400px;
+  /* display: grid;
+  place-items: center; */
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
 .allMobile {
   width: 100%;
 }

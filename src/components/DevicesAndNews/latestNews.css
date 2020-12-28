@@ -34,6 +34,19 @@
   padding-bottom: 0.4rem;
 }
 
+.latestNews__btn {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.latestNews__btn svg {
+  cursor: pointer;
+}
+.latestNews__btn:active svg {
+  color: var(--glo-green);
+  font-weight: 900;
+}
 .latestNews__now h6 + p {
   color: var(--glo-green);
   font-weight: bolder;

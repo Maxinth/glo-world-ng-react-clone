@@ -15,43 +15,50 @@ let feedBack, bgColor;
 const TopSocial = () => {
   const [showFeedBack, setShowFeedBack] = useState(false);
 
-  const FeedBackInView = (e) => {
+  const FeedBackInView = (id) => {
     setShowFeedBack(true);
 
     // render message based on target
-    switch (e.target.id) {
+    switch (id) {
       case "email":
         feedBack = "email us ";
-        bgColor = "#666666";
+        bgColor = "var(--glo-green)";
         break;
       case "twitter":
         feedBack = "follow us on twitter";
-        bgColor = "#66c2ff";
-
+        // bgColor = "#66c2ff";
+        bgColor = "#00acee";
         break;
       case "facebook":
         feedBack = "like us on facebook";
-        bgColor = "#1445ca";
+        bgColor = "#3b5998";
         break;
       case "linked-in":
         feedBack = "follow us on linkedin";
-        bgColor = " brown";
+        bgColor = " #0E76A8";
         break;
       case "instagram":
         feedBack = "follow us on instagram";
-        bgColor = "#7a7575";
+        bgColor = "purple";
         break;
       case "youTube":
         feedBack = "subscribe on YouTube";
-        bgColor = "#e91515";
+        bgColor = "#C4302B";
         break;
       default:
         console.log("it doesn't work");
         break;
     }
+    console.log(`feedback = ${feedBack}, background = ${bgColor}`);
     return feedBack;
   };
-  // console.log(feedBack);
+
+  // function to reduce code duplication on prop event Handlers - see 149(comments)
+  const mouseEnterAndLeave = (item) => ({
+    onMouseEnter: () => FeedBackInView(item),
+    onMouseLeave: () => setShowFeedBack(false),
+  });
+
   return (
     <>
       <section className="topSocial">
@@ -62,7 +69,13 @@ const TopSocial = () => {
               <SearchIcon /> <input type="search" placeholder="Search" />
             </span>
           </div>
-
+          {/* {showFeedBack && (
+          <FeedBackSlide
+            feedBack={feedBack}
+            bgColor={bgColor}
+            showFeedBack={showFeedBack}
+          />
+  )}  */}
           <div className="socialRight">
             <motion.span
               variant={iconVariant("red")}
@@ -70,8 +83,9 @@ const TopSocial = () => {
               animate="visible"
             >
               <MailIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
+                // onMouseEnter={() => FeedBackInView("email")}
+                // onMouseLeave={() => setShowFeedBack(false)}
+                {...mouseEnterAndLeave("email")}
                 id="email"
               />
             </motion.span>
@@ -80,22 +94,14 @@ const TopSocial = () => {
               initial={showFeedBack && "hidden"}
               animate="visible"
             >
-              <TwitterIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
-                id="twitter"
-              />
+              <TwitterIcon {...mouseEnterAndLeave("twitter")} id="twitter" />
             </motion.span>
             <motion.span
               variant={iconVariant}
               initial={showFeedBack && "hidden"}
               animate="visible"
             >
-              <FacebookIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
-                id="facebook"
-              />
+              <FacebookIcon {...mouseEnterAndLeave("facebook")} id="facebook" />
             </motion.span>
             <motion.span
               variant={iconVariant}
@@ -103,8 +109,7 @@ const TopSocial = () => {
               animate="visible"
             >
               <LinkedInIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
+                {...mouseEnterAndLeave("linked-in")}
                 id="linked-in"
               />
             </motion.span>
@@ -115,8 +120,7 @@ const TopSocial = () => {
               animate="visible"
             >
               <InstagramIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
+                {...mouseEnterAndLeave("instagram")}
                 id="instagram"
               />
             </motion.span>
@@ -125,18 +129,35 @@ const TopSocial = () => {
               initial={showFeedBack && "hidden"}
               animate="visible"
             >
-              <YouTubeIcon
-                onMouseEnter={(e) => FeedBackInView(e)}
-                onMouseLeave={() => setShowFeedBack(false)}
-                id="youTube"
-              />
+              <YouTubeIcon {...mouseEnterAndLeave("youTube")} id="youTube" />
             </motion.span>
           </div>
         </header>
       </section>
-      {showFeedBack && <FeedBackSlide feedBack={feedBack} bgColor={bgColor} />}
+      {/* {showFeedBack && ( */}
+      <FeedBackSlide
+        feedBack={feedBack}
+        bgColor={bgColor}
+        showFeedBack={showFeedBack}
+      />
+      {/* )} */}
     </>
   );
 };
 
 export default TopSocial;
+
+/*
+
+========= LINE 56 REDIRECTS HERE =======
+
+{...mouseEnterAndLeave(item)} when called with the item in question returns and object whose
+ items are spread and helps in not having to write
+lines 154 and 155 on ALL on the items as handlers for the mouseEnter and mouseLeave events
+
+ onMouseEnter={() => FeedBackInView("email")} --- this scenario takes 'email' as the item in question.
+ onMouseLeave={() => setShowFeedBack(false)}
+
+
+
+*/

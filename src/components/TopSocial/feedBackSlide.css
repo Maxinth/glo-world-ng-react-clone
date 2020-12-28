@@ -1,0 +1,12 @@
+.feedBackSlide {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 200;
+  transition: var(--transition);
+  /* top: -20px; */
+  box-sizing: padding-box;
+}

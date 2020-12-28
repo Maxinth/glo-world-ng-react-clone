@@ -46,6 +46,7 @@
 
 .selfCare__form input {
   border: none;
+  outline: none;
   border-bottom: 1px solid var(--glo-green);
   width: 100%;
   text-align: center;
@@ -55,8 +56,11 @@
   margin-bottom: 1rem;
 }
 
-.selfCare__form input:invalid {
+.selfCare__form input:invalid,
+.selfCare__form input:focus {
   outline: none;
+  border: none;
+  border-bottom: 1px solid var(--glo-green);
   /* border-bottom: 1px solid red; */
 }
 .selfCare__form button {

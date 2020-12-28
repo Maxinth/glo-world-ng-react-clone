@@ -50,6 +50,14 @@
   margin-right: auto;
 }
 
+.devicesPhones__open {
+  color: var(--glo-green);
+}
+
+.devicesPhones__close {
+  color: black;
+}
+
 .devicesPhones__image {
   border: 1px solid rgb(224, 227, 225);
 

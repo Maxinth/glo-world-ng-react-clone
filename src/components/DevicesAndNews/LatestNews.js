@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import ChromeReaderModeSharpIcon from "@material-ui/icons/ChromeReaderModeSharp";
 import "./latestNews.css";
 import data from "./latestNewsData";
@@ -9,49 +9,49 @@ const LatestNews = () => {
   const [block, setBlock] = useState(data[index]);
   const { date, firstParagraph, secondParagraph } = block;
 
-  const increaseIndex = () => {
-    if (index < 5) {
-      return setIndex((index) => index + 1);
-    } else {
+  const increaseIndex = useCallback(() => {
+    if (index >= data.length - 1) {
       return setIndex(0);
+    } else {
+      return setIndex((index) => index + 1);
     }
-  };
+  }, [index]);
 
   const decreaseIndex = () => {
     if (index === 0) {
-      setIndex(5);
+      setIndex(data.length - 1);
     } else {
       setIndex((index) => index - 1);
     }
   };
 
-  // const afterTimeOut = useCallback(() => {
-  //   if (index < 2) {
-  //     return setIndex(index + 1);
-  //   } else {
-  //     return setIndex(0);
-  //   }
-  // }, [index]);
+  // useEffect to automatically change the index (in this case - increase it every 5s)
+  useEffect(() => {
+    let slider = setInterval(() => {
+      increaseIndex(); // or decreaseIndex depending on the direction you wish to go
+    }, 5000);
+    // console.log(`current index = ${index}`);
+    return () => {
+      clearInterval(slider);
+    };
+  }, [index, increaseIndex]);
 
+  // final useEffect to set the block either due to click or the interval of 5s
   useEffect(() => {
     setBlock(data[index]);
   }, [index]);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     // console.log("news changes on its own after 5s");
-  //     afterTimeOut();
-  //     setBlock(data[index]);
-  //   }, 5000);
-  // }, [afterTimeOut, index]);
 
   return (
     <section className="latestNews">
       <h3 className="latestNews__head">
         <ChromeReaderModeSharpIcon /> <span>Latest News</span> <hr />
         <span className="latestNews__nav">
-          <ChevronLeftSharpIcon onClick={decreaseIndex} />
-          <ChevronRightSharpIcon onClick={increaseIndex} />
+          <button onClick={decreaseIndex} className="latestNews__btn">
+            <ChevronLeftSharpIcon />
+          </button>
+          <button onClick={increaseIndex} className="latestNews__btn">
+            <ChevronRightSharpIcon />
+          </button>
         </span>
       </h3>
       <div className="latestNews__now">
