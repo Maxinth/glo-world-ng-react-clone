@@ -3,11 +3,14 @@
   background-color: rgb(53, 53, 53);
   padding: 1rem;
   justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .mobileNav svg {
   color: rgb(153, 153, 153);
   font-size: 2rem;
+  display: block;
 }
 
 /* .mobileNav svg:hover {

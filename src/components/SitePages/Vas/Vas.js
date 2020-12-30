@@ -2,10 +2,16 @@ import React from "react";
 import SharedHeader from "../SharedContent/SharedHeader";
 import "./vas.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageEntryVariant, variantProps } from "../../variants/page";
 
 const Vas = () => {
   return (
-    <section className="vas">
+    <motion.section
+      className="vas"
+      variants={pageEntryVariant}
+      {...variantProps}
+    >
       <SharedHeader heading="vas" />
       <section className="shared__contentContainer">
         <p>
@@ -37,7 +43,7 @@ const Vas = () => {
           </li>
         </ul>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

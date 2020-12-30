@@ -14,6 +14,7 @@ import MobileMoney from "./components/SitePages/MobileMoney/MobileMoney";
 // common content across MOST pages excluding SelfCare
 import TopSection from "./components/TopSection";
 import QuickLinks from "./components/QuickLinks/QuickLinks";
+
 // end of common contents
 
 export const TopSectionContext = createContext();
@@ -43,6 +44,7 @@ const App = () => {
         </TopSectionContext.Provider>
       )}
       {/* common elements on all MOST pages - HEADER PART*/}
+
       <Switch>
         <Route path="/ng/mobile-money">
           <MobileMoney />
@@ -69,6 +71,7 @@ const App = () => {
         <Redirect from="/ng/instant-top-up" to="/ng/self-care" />
         <Redirect from="/" to="/ng" />
       </Switch>
+
       {/* common elements on all MOST pages - footer PART*/}
       {/* don't render QuickLinks when /ng/self-care is visited */}
       {location.pathname !== "/ng/self-care" && <QuickLinks />}

@@ -1,8 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
+import {
+  slideInFromLeft,
+  slideInFromRight,
+  variantProps,
+} from "../variants/page";
+const Service = ({
+  icon,
+  goTo,
+  firstLink,
+  info,
+  finalLinkText,
+  serviceIndex,
+}) => {
+  // dynamically changing variants based on index
+  const serviceVariant =
+    (serviceIndex + 1) % 2 === 0 ? slideInFromLeft : slideInFromRight;
 
-const Service = ({ icon, goTo, firstLink, info, finalLinkText }) => {
   return (
-    <article className="services__ind">
+    <motion.article
+      className="services__ind"
+      variants={serviceVariant}
+      {...variantProps}
+    >
       <span>{icon}</span>
 
       <header>
@@ -13,7 +33,7 @@ const Service = ({ icon, goTo, firstLink, info, finalLinkText }) => {
           {info}.<a href={goTo}>{finalLinkText}</a>
         </p>
       </header>
-    </article>
+    </motion.article>
   );
 };
 

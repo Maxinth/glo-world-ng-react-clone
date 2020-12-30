@@ -46,6 +46,9 @@
   padding-bottom: unset;
   font-weight: bolder;
 }
+.quickNav.quickContact .name {
+  color: black;
+}
 .quickNav__body {
   list-style-type: none;
   color: rgb(153, 153, 153);

@@ -15,13 +15,14 @@ const DevicesList = ({ name, phoneImage, status, inView }) => {
         }`}
       >
         <span className="devicesPhones__title">
-          <PhoneIphoneOutlinedIcon /> <span>{name}</span>
+          <PhoneIphoneOutlinedIcon />{" "}
+          <span className="devicesPhones__name">{name}</span>
         </span>
 
         {!showImage ? (
           <AddSharpIcon className="devicesPhones__open" />
         ) : (
-          <RemoveIcon className="devicePhones__close" />
+          <RemoveIcon className="devicesPhones__close" />
         )}
       </div>
       {showImage && (

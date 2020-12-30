@@ -7,8 +7,8 @@ import "./services.css";
 const Services = () => {
   return (
     <section className="services">
-      {data.map((datum) => (
-        <Service {...datum} key={datum.firstLink} />
+      {data.map((datum, index) => (
+        <Service {...datum} key={datum.firstLink} serviceIndex={index} />
       ))}
     </section>
   );

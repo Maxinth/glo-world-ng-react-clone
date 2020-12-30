@@ -31,6 +31,7 @@ const Footer = () => {
           </ul>
           <p>Copyright &copy; 2020 | Globacom</p>
         </div>
+
         <div className="footer__rightDetails">
           <a
             href="mailto:customercare@gloworld.com"

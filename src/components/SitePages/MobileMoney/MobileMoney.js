@@ -4,10 +4,16 @@ import SharedHeader from "../SharedContent/SharedHeader";
 import mobileMoneyImg from "../../../assets/mobilemoney.jpg";
 import { Link } from "react-router-dom";
 import bankImg from "../../../assets/partner-banks.jpg";
+import { motion } from "framer-motion";
+import { pageEntryVariant, variantProps } from "../../variants/page";
 
 const MobileMoney = () => {
   return (
-    <section className="mobileMoney">
+    <motion.section
+      className="mobileMoney"
+      variants={pageEntryVariant}
+      {...variantProps}
+    >
       <SharedHeader heading="Mobile Money" />
       <section className="shared__contentContainer">
         <section className="mobileMoney__imgContainer">
@@ -115,7 +121,7 @@ const MobileMoney = () => {
           </section>
         </div>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

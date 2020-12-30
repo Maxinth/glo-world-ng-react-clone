@@ -2,9 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./personal.css";
 import SharedHeader from "../SharedContent/SharedHeader";
+import { motion } from "framer-motion";
+import { pageEntryVariant, variantProps } from "../../variants/page";
+
 const Personal = () => {
   return (
-    <section className="personal">
+    <motion.section
+      className="personal"
+      variants={pageEntryVariant}
+      {...variantProps}
+    >
       <SharedHeader heading="personal" />
       <section className="shared__contentContainer">
         <section className="personal__text">
@@ -51,7 +58,7 @@ const Personal = () => {
           </ul>
         </nav>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

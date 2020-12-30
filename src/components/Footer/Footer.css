@@ -1,11 +1,12 @@
 footer {
   background: #54b64a;
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 1.8rem;
 }
 
 .footer__container {
   text-align: center;
+  /* padding: 0 1rem; */
 }
 .footer__nav {
   list-style-type: none;
@@ -46,6 +47,10 @@ footer {
   margin-right: 0.3rem;
 }
 
+.footer__center > a {
+  display: flex;
+  align-items: center;
+}
 .selfCare + footer {
   margin-bottom: 0rem;
   margin-top: 9rem;

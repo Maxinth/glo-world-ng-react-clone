@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import "./slideShow.css";
 import { useLocation } from "react-router-dom";
 import slideData from "./slideShowData";
+import { motion } from "framer-motion";
+import { slideShowVariant, variantProps } from "../variants/slideShow";
 const SlideShow = ({ children }) => {
   const [index, setIndex] = useState(0);
   const [data] = useState(slideData);
@@ -33,7 +35,11 @@ const SlideShow = ({ children }) => {
   }, [index]);
 
   return (
-    <div className="slideShow">
+    <motion.div
+      className="slideShow"
+      variants={slideShowVariant}
+      {...variantProps}
+    >
       <div
         className="slideShow__imgContainer"
         style={{ height: `${location.pathname !== "/ng" ? "unset" : "400px"}` }}
@@ -67,7 +73,7 @@ const SlideShow = ({ children }) => {
         )}
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

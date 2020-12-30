@@ -63,6 +63,7 @@
   text-transform: uppercase;
   font-family: "PT Sans Narrow", sans-serif;
   color: #fff;
+  transition: all 0.1s ease;
 }
 
 .nav__body li {

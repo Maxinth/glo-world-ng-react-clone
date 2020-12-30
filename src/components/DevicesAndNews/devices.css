@@ -30,7 +30,7 @@
   /* margin-bottom: 0.6rem; */
   font-family: "PT Sans Narrow", sans-serif;
   color: var(--text-color);
-
+  cursor: pointer;
   border-bottom: 1px solid rgb(224, 227, 225);
 }
 
@@ -43,6 +43,20 @@
   align-items: center;
 }
 
+.devicesPhones__name {
+  transition: var(--transition);
+}
+
+/* .devicesPhone > svg {
+  cursor: pointer;
+} */
+.devicesPhones__inner:hover .devicesPhones__open,
+.devicesPhones__inner .devicesPhones__close {
+  color: black !important;
+}
+.devicesPhones__inner:hover .devicesPhones__name {
+  color: var(--glo-green);
+}
 .devicesPhones__inner + .devicesPhones__image {
   margin-top: 0.4rem;
 }
@@ -50,6 +64,11 @@
   margin-right: auto;
 }
 
+.devicesPhones__close,
+.devicesPhones__open {
+  transition: var(--transition);
+  cursor: pointer;
+}
 .devicesPhones__open {
   color: var(--glo-green);
 }

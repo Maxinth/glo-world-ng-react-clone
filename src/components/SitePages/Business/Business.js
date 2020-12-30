@@ -2,9 +2,16 @@ import React from "react";
 import SharedHeader from "../SharedContent/SharedHeader";
 import "./business.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageEntryVariant, variantProps } from "../../variants/page";
+
 const Business = () => {
   return (
-    <section className="business">
+    <motion.section
+      className="business"
+      variants={pageEntryVariant}
+      {...variantProps}
+    >
       <SharedHeader heading="business" />
       <section className="shared__contentContainer">
         <p>
@@ -134,7 +141,7 @@ const Business = () => {
           </div>
         </section>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

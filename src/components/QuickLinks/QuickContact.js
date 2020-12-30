@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 const QuickContact = () => {
   return (
     <section className="quickNav quickContact">
-      <h3>Contact Us</h3>
+      <h3>
+        Contact "Us" = <span className="name">tunde.j.adeleye@gmail.com</span>
+      </h3>
       <ul className="quickNav__body">
         <li className="quickContact__item">
           <HomeWorkRoundedIcon />

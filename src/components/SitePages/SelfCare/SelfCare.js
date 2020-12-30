@@ -7,11 +7,22 @@ import ArrowForwardSharpIcon from "@material-ui/icons/ArrowForwardSharp";
 import "./selfCare.css";
 import Footer from "../../Footer/Footer";
 import { motion } from "framer-motion";
+
+import {
+  slideInFromRight,
+  slideInFromLeft,
+  variantProps,
+} from "../../variants/page";
+
 const SelfCare = () => {
   return (
     <>
-      <section className="selfCare">
-        <section className="selfCare__img">
+      <motion.section
+        className="selfCare"
+        // variants={selfCareVariant}
+        {...variantProps}
+      >
+        <motion.section className="selfCare__img" variants={slideInFromLeft}>
           <img
             src={mobileLogo}
             alt="glo logo"
@@ -32,8 +43,11 @@ const SelfCare = () => {
             alt="phone"
             className="selfCare__largeScreenOnly"
           />
-        </section>
-        <section className="selfCare__formContainer">
+        </motion.section>
+        <motion.section
+          className="selfCare__formContainer"
+          variants={slideInFromRight}
+        >
           <div className="selfCare__header">
             <h5>
               <span>Nigeria</span> | <span>Unlimited</span>
@@ -59,8 +73,8 @@ const SelfCare = () => {
               <ArrowForwardSharpIcon className="selfCare__forwardArrow" />
             </motion.div>
           </form>
-        </section>
-      </section>
+        </motion.section>
+      </motion.section>
       <Footer />
     </>
   );

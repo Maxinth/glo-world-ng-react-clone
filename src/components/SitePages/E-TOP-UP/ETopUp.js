@@ -3,9 +3,16 @@ import SharedHeader from "../SharedContent/SharedHeader";
 import "./eTopUp.css";
 import eTopUpImg from "../../../assets/1040x300-e-Top-Up.gif";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageEntryVariant, variantProps } from "../../variants/page";
+
 const ETopUp = () => {
   return (
-    <section className="e-topUp">
+    <motion.section
+      className="e-topUp"
+      variants={pageEntryVariant}
+      {...variantProps}
+    >
       <SharedHeader heading="E-Top-Up" />
       <section className="shared__contentContainer">
         <section className="e-topUp__imgContainer">
@@ -72,7 +79,7 @@ const ETopUp = () => {
           </li>
         </ul>
       </section>
-    </section>
+    </motion.section>
   );
 };
 
