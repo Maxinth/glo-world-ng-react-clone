@@ -5,8 +5,9 @@ import eTopUpImg from "../../../assets/1040x300-e-Top-Up.gif";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageEntryVariant, variantProps } from "../../variants/page";
-
+import useDocumentTitle from "../UseTitle";
 const ETopUp = () => {
+  useDocumentTitle("E-Top Up");
   return (
     <motion.section
       className="e-topUp"

@@ -4,8 +4,10 @@ import "./vas.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageEntryVariant, variantProps } from "../../variants/page";
+import useDocumentTitle from "../UseTitle";
 
 const Vas = () => {
+  useDocumentTitle('Value Added Services')
   return (
     <motion.section
       className="vas"

@@ -4,8 +4,10 @@ import "./personal.css";
 import SharedHeader from "../SharedContent/SharedHeader";
 import { motion } from "framer-motion";
 import { pageEntryVariant, variantProps } from "../../variants/page";
+import useDocumentTitle from "../UseTitle";
 
 const Personal = () => {
+  useDocumentTitle("Personal");
   return (
     <motion.section
       className="personal"

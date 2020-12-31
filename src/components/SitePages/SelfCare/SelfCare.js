@@ -7,6 +7,7 @@ import ArrowForwardSharpIcon from "@material-ui/icons/ArrowForwardSharp";
 import "./selfCare.css";
 import Footer from "../../Footer/Footer";
 import { motion } from "framer-motion";
+import useDocumentTitle from "../UseTitle";
 
 import {
   slideInFromRight,
@@ -15,6 +16,7 @@ import {
 } from "../../variants/page";
 
 const SelfCare = () => {
+  useDocumentTitle("Self Care");
   return (
     <>
       <motion.section

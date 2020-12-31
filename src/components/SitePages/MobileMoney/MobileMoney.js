@@ -6,8 +6,10 @@ import { Link } from "react-router-dom";
 import bankImg from "../../../assets/partner-banks.jpg";
 import { motion } from "framer-motion";
 import { pageEntryVariant, variantProps } from "../../variants/page";
+import useDocumentTitle from "../UseTitle";
 
 const MobileMoney = () => {
+  useDocumentTitle("Mobile Money");
   return (
     <motion.section
       className="mobileMoney"
