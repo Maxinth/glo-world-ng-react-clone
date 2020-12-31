@@ -4,6 +4,7 @@ import {
   slideInFromLeft,
   slideInFromRight,
   variantProps,
+  toggleOpacity,
 } from "../variants/page";
 const Service = ({
   icon,
@@ -15,7 +16,12 @@ const Service = ({
 }) => {
   // dynamically changing variants based on index
   const serviceVariant =
-    (serviceIndex + 1) % 2 === 0 ? slideInFromLeft : slideInFromRight;
+    // (serviceIndex + 1) % 2 === 0 ? slideInFromLeft : slideInFromRight;
+    serviceIndex === 0 || serviceIndex === 3
+      ? slideInFromLeft
+      : serviceIndex === 2 || serviceIndex === 5
+      ? slideInFromRight
+      : toggleOpacity;
 
   return (
     <motion.article

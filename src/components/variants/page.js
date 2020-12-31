@@ -12,10 +12,6 @@ export const pageEntryVariant = {
       duration: 0.5,
     },
   },
-
-  //   exit: {
-  //     x: "100vw",
-  //   },
 };
 
 export const slideInFromLeft = {
@@ -27,7 +23,7 @@ export const slideInFromLeft = {
     x: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 1.5,
     },
   },
 };
@@ -40,7 +36,22 @@ export const slideInFromRight = {
     x: 0,
     transition: {
       type: "tween",
-      duration: 0.5,
+      duration: 1.5,
+    },
+  },
+};
+
+export const toggleOpacity = {
+  hidden: {
+    opacity: 0,
+  },
+
+  visible: {
+    opacity: 1,
+    transition: {
+      type: "tween",
+      duration: 1.8,
+      delay: 0.2,
     },
   },
 };
